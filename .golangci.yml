@@ -14,22 +14,22 @@ linters:
     - nakedret
     - prealloc
     - whitespace
-    - revive  
+    - revive
   disable:
     - errcheck
-    - golint  
-    - interfacer  
-    - maligned  
+    - golint
+    - interfacer
+    - maligned
 
 issues:
   exclude-dirs:
     - bin
     - docs
-    - vendor  
+    - vendor
+  exclude-files:  
+    - ".*\\.test\\.go$"
 
 run:
   timeout: 3m
   modules-download-mode: readonly
   tests: true
-  skip-files:
-    - ".*\\.test\\.go$"  
