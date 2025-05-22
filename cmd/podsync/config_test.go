@@ -83,7 +83,7 @@ timeout = 15
 	assert.EqualValues(t, 0, feed.Filters.MinDuration)
 	assert.EqualValues(t, 86400, feed.Filters.MaxDuration)
 	assert.EqualValues(t, 365, feed.Filters.MaxAge)
-	assert.EqualValues(t, 365, feed.Filters.MinAge)
+	assert.EqualValues(t, 1, feed.Filters.MinAge)
 	assert.EqualValues(t, 10, feed.Clean.KeepLast)
 	assert.EqualValues(t, model.SortingDesc, feed.PlaylistSort)
 
