@@ -7,13 +7,14 @@ linters:
     - gofmt
     - goimports
     - ineffassign
-    - govet  
+    - govet
     - unused
     - misspell
     - bodyclose
     - nakedret
     - prealloc
     - whitespace
+    - revive  
   disable:
     - errcheck
     - golint  
@@ -21,11 +22,14 @@ linters:
     - maligned  
 
 issues:
-  exclude-dirs:  
+  exclude-dirs:
     - bin
     - docs
+    - vendor  
 
 run:
-  timeout: 3m  
+  timeout: 3m
   modules-download-mode: readonly
   tests: true
+  skip-files:
+    - ".*\\.test\\.go$"  
