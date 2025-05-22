@@ -62,7 +62,7 @@ func matchFilters(episode *model.Episode, filters *feed.Filters) bool {
 
 	if filters.MinAge > 0 {
 		dateDiff := int(time.Since(episode.PubDate).Hours()) / 24
-		if dateDiff < filters.MaxAge {
+		if dateDiff < filters.MinAge {
 			logger.WithField("filter", "min_age").Infof("skipping due to min_age filter (%dd < %dd)", dateDiff, filters.MinAge)
 			return false
 		}
