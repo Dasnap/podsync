@@ -2,12 +2,10 @@ name: Release
 
 on:
   push:
-    tags:
-      - 'v*'
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ lower(github.repository) }}
+  IMAGE_NAME: dasnap/podsync
 
 jobs:
   publish:
